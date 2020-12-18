@@ -1,0 +1,52 @@
+<html>
+<head>
+<title> Fibonacci Sequence </title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="fib-box">
+	<h1>FIBONACCI</h1>
+	<hr class="hr1">
+	<hr class="hr2">
+	<hr class="hr3">
+	 <h2>SEQUENCE</h2>
+	
+	<div class="inp">
+		<p>Enter Range : </p>
+			
+			<input type text="text" id="fbnc" class="inpt" placeholder="positive numbers only" />
+				<br>
+			<input type="button" id="btnEnter" class="btn"value="Enter" onclick="fibonacci(fbnc.value)" />
+	</div>
+</div>
+	<div class="ans">
+		<h1>OUTPUT :</h1>
+		<hr class="outhr1">
+		<hr class="outhr2">
+        <p id="output" ></p>
+	</div>
+
+
+<script>
+var fibonacci = function (n) 
+{
+  if (n==1) 
+  {
+var loop = [0, 1];
+   document.getElementById("output").innerHTML = loop;
+  return loop;
+  } 
+  else 
+  {
+    var s = fibonacci(n - 1);
+    s.push(s[s.length - 1] + s[s.length - 2]);
+    document.getElementById("output").innerHTML =s;
+    return s;
+  }
+   
+};
+
+</script>
+
+</body>
+</html>
